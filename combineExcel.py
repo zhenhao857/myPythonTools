@@ -1,11 +1,15 @@
 # -*- coding:utf-8 -*-
-
+'''
+本工具用于合并多个Excel中的多个sheet（具有相同的表头）至一个Excel中的一个sheet
+'''
 import xlrd,xlsxwriter,os
+from collections import deque
 
 #源excel文件夹
-file_path="F:\\combine1"
+file_path="F:\\zlastcheck\\2018年1月科技创新"
 #目标excel
-end_xls="F:\\合并后3.xlsx"
+end_xls="F:\\zlastcheck\\2018年科技创新合并结果\\2018年1月合并后数据.xlsx"
+log_file="F:\\zlastcheck\\2018年科技创新合并结果\\2018年1月合并log.txt"
 
 # 源Excel
 def get_source_file_list(file_path):
@@ -62,9 +66,9 @@ def write_to_end_excel(file_name,endxls,sheet_value,num_sheet,num_row):
     return num,num1
 
 # 合并Excel
-def combine_excel(file_path,end_xls):
+def combine_excel(file_path,end_xls,log_file):
     # 写记录文件
-    log_txt=open("F:\combine\log2.txt",'w+') 
+    log_txt=open(log_file,'w+') 
     
     allxls=get_source_file_list(file_path)
     #   初始化一个目标excel
@@ -89,4 +93,4 @@ def combine_excel(file_path,end_xls):
     log_txt.close()
     endxls.close()
 
-combine_excel(file_path,end_xls)
+combine_excel(file_path,end_xls,log_file)
