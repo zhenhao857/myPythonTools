@@ -9,7 +9,6 @@ from datetime import datetime
 
 from xlrd import xldate_as_tuple
 
-
 def set_style(name, height, bold=False):  # 字体设置
     """
     设置单元格样式
