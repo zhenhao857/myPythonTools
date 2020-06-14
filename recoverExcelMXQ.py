@@ -258,7 +258,7 @@ def start():
     # 源excel文件夹
     origin_file_path = "C:\\mengxiaoqing\\test1\\mengxiaoqing"
     # 目标excel
-    target_xls = "C:\\mengxiaoqing\\test1\\结果.xls"
+    target_xls = "C:\\mengxiaoqing\\test1\\模板.xls"
     log_file = "C:\\mengxiaoqing\\test1\\日志.txt"
     convert_excel(origin_file_path, target_xls, log_file)
 
