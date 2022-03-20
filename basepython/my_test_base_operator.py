@@ -7,15 +7,12 @@ def my_operator():
     if n := len(a) > 1:
         print(f'a len {n}')
 
-    b = 2
-    c = 3
+    b = 5
+    c = 8
     print(b ** c)
     print(b // c)
     print(c // b)
 
     print(len(a))
-
-
-my_operator()
 
 

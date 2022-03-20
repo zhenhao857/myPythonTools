@@ -53,7 +53,9 @@ def my_tuple():
 def my_list():
     list_a = [1, 'haozhen', 3.1, 1+1j]
     list_b = [5]
+    list_a.append('4')
     print(list_a)
+    del list_a[0]
     print(list_a[1])
     print(list_a[1:])
     print(list_a[1:2])
